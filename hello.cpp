@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//task1_hello_world_2.0
+
 #include <iostream>
 #include <string>
 using namespace std;
