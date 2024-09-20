@@ -1,4 +1,16 @@
-# problem_1
-Личковаха Даниил Андреевич 24.Б81-мм
+## problem_1
+
+Lichkovaha Daniil Andreevich, 24.B81-mm
+
+# email:
 st129351@student.spbu.ru
+
+# Build
+
+make
+
+# Run
+./main
+
+
 
