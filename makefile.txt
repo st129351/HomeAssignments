@@ -5,4 +5,4 @@ hello.o: hello.cpp
 main.o: main.cpp
 	g++ -c main.cpp
 clean: 
-	rm -rf *.o prog 
+	rm -rf prog *.o

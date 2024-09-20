@@ -10,7 +10,7 @@ st129351@student.spbu.ru
 make
 
 # Run
-./main
+./prog
 
 
 

@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//task1_hello_world_2.0
+//problem_1
 
 #include <iostream>
 #include <string>
