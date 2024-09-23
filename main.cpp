@@ -7,7 +7,7 @@
 #include "header.h"
 using namespace std;
 
-extern string name;
+extern string name; // Зачем его делать глобальным? 
 
 int main() {
 	int a = 0;
