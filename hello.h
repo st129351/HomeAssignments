@@ -2,8 +2,12 @@
 //st129351@student.spbu.ru
 //problem_1
 
+#ifndef HELLO_H
+#define HELLO_H
 #include <string>
-using namespace std;
 #include <iostream>
 
-void hello(int num, string name);
+
+void hello(int num, std::string name);
+
+#endif 

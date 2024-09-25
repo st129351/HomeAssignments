@@ -4,17 +4,9 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
-string name; 
-void hello(int num, string name){
-	if (num == 0) {
-		cout << "Hello, world!" << endl;
-	}
 
-	else {
-		
-		cout << "Hello, " << name << "!"<< endl;
-	}
-
+std::string name1;
+void hello(int num, std::string name1){
+	std::cout << "Hello, " << name1 << "!"<< std::endl;
 }

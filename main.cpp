@@ -4,17 +4,17 @@
 
 #include <iostream>
 #include <string>
-#include "header.h"
-using namespace std;
+#include "hello.h"
 
-extern string name;
+
+std::string name;
 
 int main() {
 	int a = 0;
-	hello(a, name);
+	std::cout << "Hello, world!" << std::endl;
 	while(true) {
-		cout << "write your name, pls (write 0 for exit): ";
-		cin >> name;
+		std::cout << "write your name, pls (write 0 for exit): ";
+		std::cin >> name;
 		if (name != "0"){
 			a += 1;
 			hello(a, name);
