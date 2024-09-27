@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//problem_1
+//Assignment1
 
 #include <iostream>
 #include <string>
