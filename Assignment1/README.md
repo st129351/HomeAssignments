@@ -1,4 +1,4 @@
-## problem_1
+## Assignment1
 
 Lichkovaha Daniil Andreevich, 24.B81-mm
 
