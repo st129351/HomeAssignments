@@ -7,6 +7,6 @@
 
 
 std::string name1;
-void hello(int num, std::string name1){
+void hello(std::string name1){
 	std::cout << "Hello, " << name1 << "!"<< std::endl;
 }

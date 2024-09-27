@@ -8,6 +8,6 @@
 #include <iostream>
 
 
-void hello(int num, std::string name);
+void hello(std::string name);
 
 #endif 
