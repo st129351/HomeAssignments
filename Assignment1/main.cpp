@@ -2,7 +2,7 @@
 //st129351@student.spbu.ru
 //Assignment1
 
-#include <iostream>
+#include <iostream>	// Данные 2 include не нужны, т.к. они есть при подключении hello.h
 #include <string>
 #include "hello.h"
 
