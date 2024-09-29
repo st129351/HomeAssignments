@@ -4,7 +4,6 @@
 
 #include "hello.h"
 
-
 void hello(std::string name1){
 	std::cout << "Hello, " << name1 << "!"<< std::endl;
 }

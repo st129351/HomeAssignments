@@ -4,7 +4,6 @@
 
 #include "hello.h"
 
-
 std::string name;
 
 int main() {

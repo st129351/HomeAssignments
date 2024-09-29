@@ -7,7 +7,6 @@
 #include <string>
 #include <iostream>
 
-
 void hello(std::string name1);
 
 #endif 
