@@ -2,8 +2,6 @@
 //st129351@student.spbu.ru
 //Assignment1
 
-#include <iostream>
-#include <string>
 #include "hello.h"
 
 
