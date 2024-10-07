@@ -31,6 +31,7 @@ int main(){
     std::cout << "The reverse file has been recorded! it's name 'test1.bin'" << std::endl;
 
     delete[] arr;
+    outfile.close();
     file.close();
 	return 0;
 
