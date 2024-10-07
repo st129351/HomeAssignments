@@ -1,4 +1,4 @@
-## Assignment2a
+## Assignment2b
 
 Lichkovaha Daniil Andreevich, 24.B81-mm
 
@@ -10,7 +10,4 @@ st129351@student.spbu.ru
 make
 
 # Run
-./assignment2a
-
-
-
+./assignment2b
