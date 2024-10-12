@@ -25,36 +25,22 @@ double processing(double* list, std::istringstream& newString) {
 
     		if (currItem == "+") { // "+", not '+', currItem is string
     			result = list[top - 1] + list[top];
-
-    			list[top] = 0.0; // clear this item
-    			top -= 1; // go back one item, because work with stack (LIFO)
-    			list[top] = result; // return top to index back
-    			
     		}
 
     		if (currItem == "*") {
     			result = list[top - 1] * list[top];
-
-    			list[top] == 0.0;
-    			top -= 1;
-    			list[top] = result;
     		}
 
     		if (currItem == "-") {
     			result = list[top - 1] - list[top];
-
-    			list[top] == 0.0;
-    			top -= 1;
-    			list[top] = result;
     		}
 
     		if (currItem == "/") {
     			result = list[top - 1] / list[top];
-
-    			list[top] == 0.0;
-    			top -= 1;
-    			list[top] = result;
     		}
+            list[top] = 0.0; // clear this item
+            top -= 1; // go back one item, because work with stack (LIFO)
+            list[top] = result; // return top to index back
     	} 
     }
 
