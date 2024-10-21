@@ -1,9 +1,15 @@
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
-#include "tarnsformer.h"
+#include "transformer.h"
 #include "thread"
 #include "chrono" // to delay time in Racing()
+
+struct AutobotData : TransformerData // defaults to public
+{
+	std::string transform_to;
+	uint max_speed;
+};
 
 class Autobot : public Transformer
 {
@@ -21,14 +27,7 @@ public:
 private:
 
     std::string _transform_to;
-    uint _max_spped;
-}
-
-struct AutobotData : TransformerData // defaults to public
-{
-	std::string transform_to;
-	uint max_speed;
-}
-
+    uint _max_speed;
+};
 
 #endif

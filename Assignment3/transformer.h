@@ -6,6 +6,12 @@
 #include "Gun.h"
 #include "Armour.h"
 
+struct TransformerData 
+{
+    std::string name;
+    uint age;
+};
+
 class Transformer
 {
 public:
@@ -48,13 +54,5 @@ private:
 	Gun* _gun; // association
     Armour* _armour; // composition
 };
-
-struct TransformerData 
-{
-    std::string name;
-    uint age;
-}
-
-
 
 #endif

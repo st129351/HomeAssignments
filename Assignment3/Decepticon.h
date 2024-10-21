@@ -1,7 +1,14 @@
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 
-#include "tarnsformer.h"
+#include "transformer.h"
+
+struct DecepticonData : TransformerData
+{
+    std::string transform_to;
+    uint viewing_radius;
+
+};
 
 class Decepticon : public Transformer
 {
@@ -20,13 +27,6 @@ private:
 
     std::string _transform_to;
     uint _viewing_radius;
-}
-
-struct DecepticonData : TransformerData
-{
-    std::string transform_to;
-    uint viewing_radius;
-
-}
+};
 
 #endif
