@@ -1,11 +1,14 @@
 #include "transformer.h"
 
-Transformer::Transformer() {
+Transformer::Transformer(TransformerData botset) {
 	_armour = new Armour("Shield");
 	_gun = new Gun("Defaul Gun");
+
+	_name = botset.name;
+	_age = botset.age;
 }
 
-~Transformer::Transformer() {
+Transformer::~Transformer() {
 	delete _armour;
 }
 
@@ -57,14 +60,14 @@ bool Transformer::GetTransform()
 
 void Transformer::GetGunInfo() 
 {
-    _gun -> GetGunName();
-    _gun -> GetGunAmmo();
+    std::cout << "Gun: " << _gun -> GetGunName() << std::endl;
+    std::cout << "Quantity bullets in ammo rack: "_gun -> GetGunAmmo() << std::endl;
 }
 
 void Transformer::GetArmourInfo()
 {
-	_armour -> GetArmourName();
-	_armour -> GetArmourStrength();
+	std::cout << "Amour: " << _armour -> GetArmourName() << std::endl;
+	std::cout << "Armour safety factor: " << _armour -> GetArmourStrength() << std::endl;
 }
 
 
@@ -78,6 +81,11 @@ void Transformer::SetLevel(uint new_level)
 void Transformer::SetHealth(uint new_health)
 {
 	_health = new_health;
+}
+
+void Transformer::SetTransform(bool new_transform) 
+{
+	_is_transform = new_transform;
 }
 
 void Transformer::SetGun(std::string new_gun, uint new_bullets)
