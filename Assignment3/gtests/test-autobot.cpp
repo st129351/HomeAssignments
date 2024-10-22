@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #include "Autobot.h"
 #include "gtest/gtest.h"
 

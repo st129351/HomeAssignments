@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #ifndef GUN_H
 #define GUN_H
 

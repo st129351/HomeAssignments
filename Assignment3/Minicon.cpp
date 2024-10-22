@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #include "Minicon.h"
 
 Minicon::Minicon(MiniconData minicon1) : Transformer(minicon1) {

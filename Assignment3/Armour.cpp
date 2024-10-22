@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #include "Armour.h"
 
 Armour::Armour(std::string name) : _armour_name(name), _strength(100) {}

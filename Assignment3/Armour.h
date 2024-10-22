@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #ifndef ARMOUR_H
 #define ARMOUR_H
 

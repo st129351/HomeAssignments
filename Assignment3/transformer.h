@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 

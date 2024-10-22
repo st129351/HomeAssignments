@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 

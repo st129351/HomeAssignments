@@ -1,3 +1,7 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//Assignment3
+
 #include "Gun.h"
 
 Gun::Gun(std::string name): _gun_name(name), _ammo_rack(25) {} // contructor
