@@ -1,5 +1,5 @@
-#include "transformer.h"
 #include "gtest/gtest.h"
+#include "transformer.h"
 
 TEST(transformer, Initialization)
 {
