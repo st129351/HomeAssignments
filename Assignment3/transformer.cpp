@@ -14,7 +14,7 @@ Transformer::~Transformer() {
 
 void Transformer::Fire()
 {
-	if (_gun && _gun -> GetGunAmmo() != 0) {
+	if (_gun && GetGunAmmo() != 0) {
 		// ^ check _gun != nullptr
 		_gun -> Strike();
 	}

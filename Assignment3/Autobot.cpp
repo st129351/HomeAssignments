@@ -9,13 +9,11 @@ Autobot::Autobot(AutobotData autobot1) : Transformer(autobot1) {
 // constructor
 
 void Autobot::Racing() {
-	SetTransform(true);
+	Transform::SetTransform(true); // specifided method scope (method from Transformer)
 	std::cout << "Successful Transformation to " << GetTransformTo() << std::endl;
 	std::cout << "Start racing!" << std::endl;
 	std::cout << "Speed: " << GetMaxSpeed() / 3 << std::endl;
-	std::this_thread::sleep_for(std::chrono::seconds(1));
 	std::cout << "Speed: " << 2 * (GetMaxSpeed() / 3)  << std::endl;
-	std::this_thread::sleep_for(std::chrono::seconds(1));
 	std::cout << "Maximum speed reached! Speed: " << GetMaxSpeed() << std::endl;
 }
 // 1st method

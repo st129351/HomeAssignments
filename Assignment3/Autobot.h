@@ -2,8 +2,6 @@
 #define AUTOBOT_H
 
 #include "transformer.h"
-#include "thread"
-#include "chrono" // to delay time in Racing()
 
 struct AutobotData : TransformerData // defaults to public
 {
