@@ -42,6 +42,8 @@ public:
     void SetLevel(uint new_level);
     void SetHealth(uint new_health);
     void SetTransform(bool new_transform);
+    void SetName(std::string new_name);
+    void SetAge(uint new_age);
     void SetGun(std::string new_gun, uint new_bullets);
     void SetArmour(std::string new_armour, uint new_strength);
     // setters

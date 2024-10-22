@@ -19,7 +19,7 @@ TEST(transformer, Initialization)
 	// expect gives all the accumulated errors after executing the test
 	// check, that _gun is init
 	EXPECT_EQ(transformer.GetGunName(), "Defaul Gun");
-	EXPECT_EQ(transformer.GetGunAmmo(), 25);
+	EXPECT_EQ(transformer.GetGunAmmo(), 25); // check properties, not private _gun
 
 	ASSERT_NE(transformer.GetArmour(), nullptr);
 	EXPECT_EQ(transformer.GetArmourName(), "Shield");
@@ -48,4 +48,33 @@ TEST(transformer, Transform)
 	// started is false (check in Initialization)
 	transformer.Transform();
 	EXPECT_TRUE(transformer.GetTransform());
+}
+
+TEST(transformer, Setters)
+{
+	TransformerData data{"Optimus Prime", 1000};
+	Transformer transformer(data);
+
+	transformer.SetLevel(5);
+	transformer.SetHealth(34);
+	transformer.SetTransform(true);
+	transformer.SetName("Bumblebee");
+	transformer.SetAge(15);
+	transformer.SetGun("AK-47", 9);
+    transformer.SetArmour("Exoskeleton", 9);
+
+    EXPECT_EQ(transformer.GetLevel(), 5);
+    EXPECT_EQ(transformer.GetHealth(), 34);
+    EXPECT_TRUE(transformer.GetTransform());
+    EXPECT_EQ(transformer.GetName(), "Bumblebee");
+	EXPECT_EQ(transformer.GetAge(), 15);
+
+	ASSERT_NE(transformer.GetGun(), nullptr);
+	// assert not equal (in this case Gun *_gun)
+	EXPECT_EQ(transformer.GetGunName(), "AK-47");
+	EXPECT_EQ(transformer.GetGunAmmo(), 9); // check properties, not private _gun
+
+	ASSERT_NE(transformer.GetArmour(), nullptr);
+	EXPECT_EQ(transformer.GetArmourName(), "Exoskeleton");
+	EXPECT_EQ(transformer.GetArmourStrength(), 9);
 }

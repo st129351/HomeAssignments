@@ -56,4 +56,5 @@ clean:
 
 cleanall:
 	rm -f $(TEST_DIR)/*.o *.o assignment3 tests
+# remove all (all is *) .o files in general and TEST dirs, remove target (output) files
 

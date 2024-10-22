@@ -105,6 +105,16 @@ void Transformer::SetTransform(bool new_transform)
 	_is_transform = new_transform;
 }
 
+void Transformer::SetName(std::string new_name)
+{
+	_name = new_name;
+}
+
+void Transformer::SetAge(uint new_age)
+{
+	_age = new_age;
+}
+
 void Transformer::SetGun(std::string new_gun, uint new_bullets)
 {
 	delete _gun;

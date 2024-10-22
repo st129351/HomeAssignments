@@ -12,11 +12,21 @@ TEST(Autobot, Initialization)
 
 TEST(Autobot, Racing)
 {
-	AutobotData data{"Optimus Prime", 1000, "Truck", 320}; // init struct in variable data
-	Autobot transformer(data); // init obj transformer
+	AutobotData data{"Optimus Prime", 1000, "Truck", 320};
+	Autobot transformer(data);
 
 	EXPECT_FALSE(transformer.Transformer::GetTransform());
 	transformer.Racing();
 	EXPECT_TRUE(transformer.Transformer::GetTransform());
 }
 
+TEST(Autobot, Setters)
+{
+	AutobotData data{"Optimus Prime", 1000, "Truck", 320};
+	Autobot transformer(data);
+
+	transformer.SetTransformTo("BMW M5 F90");
+	transformer.SetMaxSpeed(305);
+    EXPECT_EQ(transformer.GetTransformTo(), "BMW M5 F90");
+	EXPECT_EQ(transformer.GetMaxSpeed(), 305);
+}

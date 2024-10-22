@@ -31,3 +31,11 @@ TEST(Gun, Reloading)
     gun.Reloading(); // check work reloading with full ammo rack
     EXPECT_EQ(gun.GetGunAmmo(), 25);
 }
+
+TEST(Gun, Setter)
+{
+	Gun gun("Gun");
+	// check SetGunAmmo() higher
+	gun.SetGunName("AWP");
+	EXPECT_EQ(gun.GetGunName(), "AWP");
+}
