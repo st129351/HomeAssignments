@@ -58,16 +58,14 @@ bool Transformer::GetTransform()
 	return _is_transform;
 }
 
-void Transformer::GetGunInfo() 
+Gun* Transformer::GetGun() 
 {
-    std::cout << "Gun: " << _gun -> GetGunName() << std::endl;
-    std::cout << "Quantity bullets in ammo rack: " << _gun -> GetGunAmmo() << std::endl;
+    return _gun;
 }
 
-void Transformer::GetArmourInfo()
+Armour* Transformer::GetArmour()
 {
-	std::cout << "Amour: " << _armour -> GetArmourName() << std::endl;
-	std::cout << "Armour safety factor: " << _armour -> GetArmourStrength() << std::endl;
+	return _armour;
 }
 
 

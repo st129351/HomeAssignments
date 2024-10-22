@@ -30,8 +30,8 @@ public:
     bool GetTransform();
     // getters
 
-    void GetGunInfo();
-    void GetArmourInfo();
+    Gun* GetGun();
+    Armour* GetArmour(); // Armour* - the type of returning value (pointer on obj with class Armour)
 
     void SetLevel(uint new_level);
     void SetHealth(uint new_health);
