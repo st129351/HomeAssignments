@@ -46,10 +46,10 @@ public:
 private:
 
 	std::string _name;
-	uint _level;
-	uint _health;
 	uint _age;
-	bool _is_transform = false;
+	bool _is_transform = false; // started value
+    uint _level = 0; // started value
+    uint _health = 100; // started value
 
 	Gun* _gun; // association
     Armour* _armour; // composition
