@@ -1,7 +1,7 @@
 #include "transformer.h"
 #include "gtest/gtest.h"
 
-TEST(transformer, cunstructor)
+TEST(transformer, Initialization)
 {
 	TransformerData data{"Optimus Prime", 1000}; // init struct in variable data
 	Transformer transformer(data);
@@ -11,7 +11,19 @@ TEST(transformer, cunstructor)
 	EXPECT_EQ(transformer.GetAge(), 1000);
 	EXPECT_EQ(transformer.GetLevel(), 0);
 	EXPECT_EQ(transformer.GetHealth(), 100);
+	EXPECT_FALSE(transformer.GetTransform());
 
+	EXPECT_FALSE(transformer.GetTransform());
+	// assume, that started value in _is_transform is false
 
+	ASSERT_NE(transformer.GetGun(), nullptr);
+	// assert immediately fails the test with an error
+	// expect gives all the accumulated errors after executing the test
+	// check, that _gun is init
+	EXPECT_EQ(transformer.GetGunName(), "Defaul Gun");
+	EXPECT_EQ(transformer.GetGunAmmo(), 25);
 
+	ASSERT_NE(transformer.GetArmour(), nullptr);
+	EXPECT_EQ(transformer.GetArmourName(), "Shield");
+	EXPECT_EQ(transformer.GetArmourStrength(), 100);
 }

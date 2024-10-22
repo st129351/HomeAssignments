@@ -33,15 +33,18 @@ public:
     Gun* GetGun();
     Armour* GetArmour(); // Armour* - the type of returning value (pointer on obj with class Armour)
 
+    std::string GetGunName();
+    uint GetGunAmmo();
+    std::string GetArmourName();
+    uint GetArmourStrength();
+    // getters for encapsulation
+
     void SetLevel(uint new_level);
     void SetHealth(uint new_health);
     void SetTransform(bool new_transform);
     void SetGun(std::string new_gun, uint new_bullets);
     void SetArmour(std::string new_armour, uint new_strength);
     // setters
-    
-
-
 
 private:
 

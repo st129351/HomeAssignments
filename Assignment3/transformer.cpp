@@ -68,6 +68,25 @@ Armour* Transformer::GetArmour()
 	return _armour;
 }
 
+std::string Transformer::GetGunName()
+{
+	return _gun->GetGunName();
+}
+
+uint Transformer::GetGunAmmo()
+{
+	return _gun->GetGunAmmo();
+}
+
+std::string Transformer::GetArmourName()
+{
+	return _armour->GetArmourName();
+}
+
+uint Transformer::GetArmourStrength()
+{
+	return _armour->GetArmourStrength();
+}
 
 // next setters
 
