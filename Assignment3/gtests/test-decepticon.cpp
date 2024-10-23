@@ -7,16 +7,16 @@
 
 TEST(Decepticon, Initialization)
 {
-	DecepticonData data{"Optimus Prime", 1000, "Truck", 320}; // init struct in variable data
+	DecepticonData data{"Optimus Prime", 1000, "gun", "Truck", 320}; // init struct in variable data
 	Decepticon transformer(data); // init obj transformer
 
-	EXPECT_EQ(transformer.GetTransformTo(), "Truck");
+	EXPECT_STREQ(transformer.GetTransformTo().c_str(), "Truck");
 	EXPECT_EQ(transformer.GetViewingRadius(), 320);
 }
 
 TEST(Decepticon, Flying)
 {
-	DecepticonData data{"Optimus Prime", 1000, "Truck", 320};
+	DecepticonData data{"Optimus Prime", 1000, "gun", "Truck", 320};
 	Decepticon transformer(data);
 
 	EXPECT_FALSE(transformer.Transformer::GetTransform());
@@ -26,11 +26,11 @@ TEST(Decepticon, Flying)
 
 TEST(Decepticon, Setters)
 {
-	DecepticonData data{"Optimus Prime", 1000, "Truck", 320};
+	DecepticonData data{"Optimus Prime", 1000, "gun", "Truck", 320};
 	Decepticon transformer(data);
 
 	transformer.SetTransformTo("Mercedes VISION EQXX");
 	transformer.SetViewingRadius(300);
-	EXPECT_EQ(transformer.GetTransformTo(), "Mercedes VISION EQXX");
+	EXPECT_STREQ(transformer.GetTransformTo().c_str(), "Mercedes VISION EQXX");
 	EXPECT_EQ(transformer.GetViewingRadius(), 300);
 }

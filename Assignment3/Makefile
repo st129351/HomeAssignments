@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -Wall -pthread -I.
+CXXFLAGS = -g -Wall -pthread -I. -Werror -Wpedantic
 # -pthread flag for multithreading (pc resources are used more efficiently)
 # -wall flag for compiler warnings;
 # -g flag for different errors and debugging info

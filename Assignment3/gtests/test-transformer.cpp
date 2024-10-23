@@ -7,10 +7,10 @@
 
 TEST(transformer, Initialization)
 {
-	TransformerData data{"Optimus Prime", 1000}; // init struct in variable data
+	TransformerData data{"Optimus Prime", 1000, "gun"}; // init struct in variable data
 	Transformer transformer(data); // init obj transformer
 
-	EXPECT_EQ(transformer.GetName(), "Optimus Prime");
+	EXPECT_STREQ(transformer.GetName().c_str(), "Optimus Prime"); // c_str() - type casting (std::sting --> c-style string)
 	// in expect_eq(output_value, expected_value) expect equal between output and expected values
 	EXPECT_EQ(transformer.GetAge(), 1000);
 	EXPECT_EQ(transformer.GetLevel(), 0);
@@ -18,21 +18,20 @@ TEST(transformer, Initialization)
 	EXPECT_FALSE(transformer.GetTransform());
 	// assume, that started value in _is_transform is false
 
-	ASSERT_NE(transformer.GetGun(), nullptr);
 	// assert immediately fails the test with an error
 	// expect gives all the accumulated errors after executing the test
 	// check, that _gun is init
-	EXPECT_EQ(transformer.GetGunName(), "Defaul Gun");
+	EXPECT_STREQ(transformer.GetGunName().c_str(), "gun");
 	EXPECT_EQ(transformer.GetGunAmmo(), 25); // check properties, not private _gun
 
 	ASSERT_NE(transformer.GetArmour(), nullptr);
-	EXPECT_EQ(transformer.GetArmourName(), "Shield");
+	EXPECT_STREQ(transformer.GetArmourName().c_str(), "Shield");
 	EXPECT_EQ(transformer.GetArmourStrength(), 100);
 }
 
 TEST(transformer, Fire)
 {
-	TransformerData data{"Optimus Prime", 1000};
+	TransformerData data{"Optimus Prime", 1000, "gun"};
 	Transformer transformer(data);
 
 	transformer.Fire();
@@ -46,7 +45,7 @@ TEST(transformer, Fire)
 
 TEST(transformer, Transform)
 {
-	TransformerData data{"Optimus Prime", 1000};
+	TransformerData data{"Optimus Prime", 1000, "gun"};
 	Transformer transformer(data);
 
 	// started is false (check in Initialization)
@@ -56,7 +55,7 @@ TEST(transformer, Transform)
 
 TEST(transformer, Setters)
 {
-	TransformerData data{"Optimus Prime", 1000};
+	TransformerData data{"Optimus Prime", 1000, "gun"};
 	Transformer transformer(data);
 
 	transformer.SetLevel(5);
@@ -70,15 +69,14 @@ TEST(transformer, Setters)
     EXPECT_EQ(transformer.GetLevel(), 5);
     EXPECT_EQ(transformer.GetHealth(), 34);
     EXPECT_TRUE(transformer.GetTransform());
-    EXPECT_EQ(transformer.GetName(), "Bumblebee");
+    EXPECT_STREQ(transformer.GetName().c_str(), "Bumblebee");
 	EXPECT_EQ(transformer.GetAge(), 15);
 
-	ASSERT_NE(transformer.GetGun(), nullptr);
-	// assert not equal (in this case Gun *_gun)
-	EXPECT_EQ(transformer.GetGunName(), "AK-47");
+	// assert not equal
+	EXPECT_STREQ(transformer.GetGunName().c_str(), "AK-47");
 	EXPECT_EQ(transformer.GetGunAmmo(), 9); // check properties, not private _gun
 
 	ASSERT_NE(transformer.GetArmour(), nullptr);
-	EXPECT_EQ(transformer.GetArmourName(), "Exoskeleton");
+	EXPECT_STREQ(transformer.GetArmourName().c_str(), "Exoskeleton");
 	EXPECT_EQ(transformer.GetArmourStrength(), 9);
 }

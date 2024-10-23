@@ -4,12 +4,10 @@
 
 #include "transformer.h"
 
-Transformer::Transformer(TransformerData botset) {
-	_armour = new Armour("Shield");
-	_gun = new Gun("Defaul Gun");
-
+Transformer::Transformer(TransformerData botset) : _gun(botset.gun_name) {
 	_name = botset.name;
 	_age = botset.age;
+	_armour = new Armour("Shield");
 }
 
 Transformer::~Transformer() {
@@ -18,13 +16,12 @@ Transformer::~Transformer() {
 
 void Transformer::Fire()
 {
-	if (_gun && GetGunAmmo() != 0) {
-		// ^ check _gun != nullptr
-		_gun -> Strike();
+	if (GetGunAmmo() != 0) {
+		_gun.Strike();
 	}
 	else {
-		_gun -> Reloading();
-		_gun -> Strike();
+		_gun.Reloading();
+		_gun.Strike();
 	}
 }
 
@@ -62,7 +59,7 @@ bool Transformer::GetTransform()
 	return _is_transform;
 }
 
-Gun* Transformer::GetGun() 
+Gun Transformer::GetGun() 
 {
     return _gun;
 }
@@ -74,12 +71,12 @@ Armour* Transformer::GetArmour()
 
 std::string Transformer::GetGunName()
 {
-	return _gun->GetGunName();
+	return _gun.GetGunName();
 }
 
 uint Transformer::GetGunAmmo()
 {
-	return _gun->GetGunAmmo();
+	return _gun.GetGunAmmo();
 }
 
 std::string Transformer::GetArmourName()
@@ -121,11 +118,7 @@ void Transformer::SetAge(uint new_age)
 
 void Transformer::SetGun(std::string new_gun, uint new_bullets)
 {
-	delete _gun;
-	// delete gun, if it was in memory
-	_gun = new Gun(new_gun);
-
-	_gun -> SetGunAmmo(new_bullets);
+	_gun.SetGunAmmo(new_bullets);
 }
 
 void Transformer::SetArmour(std::string new_armour, uint new_strength)

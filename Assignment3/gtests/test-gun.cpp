@@ -9,7 +9,7 @@ TEST(Gun, Initialization)
 {
 	Gun gun("Gun");
 	EXPECT_EQ(gun.GetGunAmmo(), 25);
-	EXPECT_EQ(gun.GetGunName(), "Gun");
+	EXPECT_STREQ(gun.GetGunName().c_str(), "Gun");
 }
 
 TEST(Gun, Strike)
@@ -41,5 +41,5 @@ TEST(Gun, Setter)
 	Gun gun("Gun");
 	// check SetGunAmmo() higher
 	gun.SetGunName("AWP");
-	EXPECT_EQ(gun.GetGunName(), "AWP");
+	EXPECT_STREQ(gun.GetGunName().c_str(), "AWP");
 }

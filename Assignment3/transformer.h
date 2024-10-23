@@ -14,6 +14,7 @@ struct TransformerData
 {
     std::string name;
     uint age;
+    std::string gun_name;
 };
 
 class Transformer
@@ -34,7 +35,7 @@ public:
     bool GetTransform();
     // getters
 
-    Gun* GetGun();
+    Gun GetGun();
     Armour* GetArmour(); // Armour* - the type of returning value (pointer on obj with class Armour)
 
     std::string GetGunName();
@@ -60,8 +61,8 @@ private:
     uint _level = 0; // started value
     uint _health = 100; // started value
 
-	Gun* _gun; // association
-    Armour* _armour; // composition
+	Gun _gun; // composition 
+    Armour* _armour;// association
 };
 
 #endif
