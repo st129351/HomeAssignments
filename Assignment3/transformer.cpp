@@ -118,6 +118,7 @@ void Transformer::SetAge(uint new_age)
 
 void Transformer::SetGun(std::string new_gun, uint new_bullets)
 {
+	_gun.SetGunName(new_gun);
 	_gun.SetGunAmmo(new_bullets);
 }
 

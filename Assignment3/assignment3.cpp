@@ -3,6 +3,7 @@
 //Assignment3
 
 #include <iostream>
+#include <gtest/gtest.h>
 
 #include "transformer.h"
 #include "Autobot.h"
@@ -12,5 +13,6 @@
 int main()
 {
 	std::cout << "GAME ON!" << std::endl;
-	return 0;
+	::testing::InitGoogleTest();
+	return RUN_ALL_TESTS();
 }

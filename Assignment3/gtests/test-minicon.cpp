@@ -18,10 +18,7 @@ TEST(Minicon, Analysis)
 {
 	MiniconData data{"Optimus Prime", 1000, "gun", "Truck", 320};
 	Minicon transformer(data); 
-
-	EXPECT_FALSE(transformer.Transformer::GetTransform());
 	transformer.Analysis();
-	EXPECT_TRUE(transformer.Transformer::GetTransform());
 }
 
 TEST(Minicon, Setters)

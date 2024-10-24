@@ -5,8 +5,6 @@
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 
-#include <iostream>
-#include <string>
 #include "Gun.h"
 #include "Armour.h"
 

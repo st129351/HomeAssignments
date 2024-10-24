@@ -39,7 +39,7 @@ $(OBJ_FILES): %.o : %.cpp
 # ":" - determine dependence (if .cpp changed --> .o changing; also with OBJ_FILES and .o)
 
 assignment3: $(OBJ_FILES)
-	$(CXX) $(CXXFLAGS) -o assignment3 $(OBJ_FILES)
+	$(CXX) $(CXXFLAGS) -o assignment3 $(OBJ_FILES) $(GTEST_LIBS)
 # i can assemble a file g++ -o main main.cpp and g++ -o main main.o
 # but with main.o, if there were no changes, 
 # .o file mustn't compile and .cpp must compile again anyway
@@ -57,4 +57,3 @@ clean:
 cleanall:
 	rm -f $(TEST_DIR)/*.o *.o assignment3 tests
 # remove all (all is *) .o files in general and TEST dirs, remove target (output) files
-
