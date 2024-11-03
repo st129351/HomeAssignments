@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
@@ -17,11 +17,11 @@ struct DecepticonData : TransformerData
 class Decepticon : public Transformer
 {
 public:
-	Decepticon(DecepticonData decepticon1);
+    Decepticon(DecepticonData decepticon1);
     Decepticon();
 
-	void Flying();
-    
+    void Flying();
+
     std::string GetTransformTo();
     uint GetViewingRadius();
 

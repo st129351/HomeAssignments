@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #ifndef ARMOUR_H
 #define ARMOUR_H
@@ -21,8 +21,8 @@ public:
     void SetArmourStrength(uint new_strength);
 
 private:
-	std::string _armour_name;
-	uint _strength;
+    std::string _armour_name;
+    uint _strength;
 };
 
 #endif

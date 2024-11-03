@@ -1,7 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
-
+//Assignment4
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
@@ -9,18 +8,18 @@
 
 struct AutobotData : TransformerData // defaults to public
 {
-	std::string transform_to;
-	uint max_speed;
+    std::string transform_to;
+    uint max_speed;
 };
 
 class Autobot : public Transformer
 {
 public:
-	Autobot(AutobotData autobot1);
+    Autobot(AutobotData autobot1);
     Autobot();
 
-	void Racing();
-    
+    void Racing();
+
     std::string GetTransformTo();
     uint GetMaxSpeed();
 

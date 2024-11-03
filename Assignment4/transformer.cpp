@@ -1,14 +1,14 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #include "transformer.h"
 
-Transformer::Transformer(TransformerData botset) : _gun(botset.gun_name) 
+Transformer::Transformer(TransformerData botset) : _gun(botset.gun_name)
 {
-	_name = botset.name;
-	_age = botset.age;
-	_armour = new Armour("Shield");
+    _name = botset.name;
+    _age = botset.age;
+    _armour = new Armour("Shield");
 }
 
 Transformer::Transformer() : _gun("Nameless gun")
@@ -18,144 +18,147 @@ Transformer::Transformer() : _gun("Nameless gun")
     _armour = new Armour("Nameless armour");
 }
 
-Transformer::~Transformer() {
-	delete _armour;
+Transformer::~Transformer()
+{
+    delete _armour;
 }
 
 void Transformer::Fire()
 {
-	if (GetGunAmmo() != 0) {
-		_gun.Strike();
-	}
-	else {
-		_gun.Reloading();
-		_gun.Strike();
-	}
+    if (GetGunAmmo() != 0)
+    {
+        _gun.Strike();
+    }
+    else
+    {
+        _gun.Reloading();
+        _gun.Strike();
+    }
 }
 
 bool Transformer::Transform()
 {
-	_is_transform = !_is_transform;
-	return _is_transform;
-	//transformation and untransformation
+    _is_transform = !_is_transform;
+    return _is_transform;
+    //transformation and untransformation
 }
 
 // next getters
 
 std::string Transformer::GetName()
 {
-	return _name;
+    return _name;
 }
 
 uint Transformer::GetLevel()
 {
-	return _level;
+    return _level;
 }
 
 uint Transformer::GetHealth()
 {
-	return _health;
+    return _health;
 }
 
 uint Transformer::GetAge()
 {
-	return _age;
+    return _age;
 }
 
 bool Transformer::GetTransform()
 {
-	return _is_transform;
+    return _is_transform;
 }
 
-Gun Transformer::GetGun() 
+Gun Transformer::GetGun()
 {
     return _gun;
 }
 
 Armour* Transformer::GetArmour()
 {
-	return _armour;
+    return _armour;
 }
 
 std::string Transformer::GetGunName()
 {
-	return _gun.GetGunName();
+    return _gun.GetGunName();
 }
 
 uint Transformer::GetGunAmmo()
 {
-	return _gun.GetGunAmmo();
+    return _gun.GetGunAmmo();
 }
 
 std::string Transformer::GetArmourName()
 {
-	return _armour->GetArmourName();
+    return _armour->GetArmourName();
 }
 
 uint Transformer::GetArmourStrength()
 {
-	return _armour->GetArmourStrength();
+    return _armour->GetArmourStrength();
 }
 
 // next setters
 
 void Transformer::SetLevel(uint new_level)
 {
-	_level = new_level;
+    _level = new_level;
 }
 
 void Transformer::SetHealth(uint new_health)
 {
-	_health = new_health;
+    _health = new_health;
 }
 
-void Transformer::SetTransform(bool new_transform) 
+void Transformer::SetTransform(bool new_transform)
 {
-	_is_transform = new_transform;
+    _is_transform = new_transform;
 }
 
 void Transformer::SetName(std::string new_name)
 {
-	_name = new_name;
+    _name = new_name;
 }
 
 void Transformer::SetAge(uint new_age)
 {
-	_age = new_age;
+    _age = new_age;
 }
 
 void Transformer::SetGun(std::string new_gun, uint new_bullets)
 {
-	_gun.SetGunName(new_gun);
-	_gun.SetGunAmmo(new_bullets);
+    _gun.SetGunName(new_gun);
+    _gun.SetGunAmmo(new_bullets);
 }
 
 void Transformer::SetArmour(std::string new_armour, uint new_strength)
 {
-	delete _armour;
-	_armour = new Armour(new_armour);
+    delete _armour;
+    _armour = new Armour(new_armour);
 
-	_armour -> SetArmourStrength(new_strength);
+    _armour -> SetArmourStrength(new_strength);
 }
 
 std::ostream& operator <<(std::ostream& stream, Transformer& transformer)
 {
-	stream << "Info about transformer: "
-	<< "Name: " << transformer.GetName() << ", "
-	<< "Age: " << transformer.GetAge() << ", "
-	<< "Gun: " << transformer.GetGunName(); 
+    stream << "Info about transformer: "
+           << "Name: " << transformer.GetName() << ", "
+           << "Age: " << transformer.GetAge() << ", "
+           << "Gun: " << transformer.GetGunName();
 
-	return stream;
+    return stream;
 }
 // overloading <<, "std::o(utput)stream" - link to output stream
 // transformer - second arg, now we can output info about transformer like cout<<transformer;
 
 bool Transformer::operator >(Transformer& transformer1)
 {
-	return _age > transformer1.GetAge();
+    return _age > transformer1.GetAge();
 }
 
 bool Transformer::operator <(Transformer& transformer2)
 {
-	return _age < transformer2.GetAge();
+    return _age < transformer2.GetAge();
 }

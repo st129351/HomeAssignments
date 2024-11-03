@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #ifndef MINICON_H
 #define MINICON_H
@@ -17,11 +17,11 @@ struct MiniconData : TransformerData
 class Minicon : public Transformer
 {
 public:
-	Minicon(MiniconData minicon1);
+    Minicon(MiniconData minicon1);
     Minicon();
 
-	void Analysis();
-    
+    void Analysis();
+
     std::string GetTransformTo();
     uint GetIQ();
 

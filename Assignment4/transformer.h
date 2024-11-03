@@ -1,6 +1,6 @@
 //Lichkovaha Daniil
 //st129351@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
@@ -9,7 +9,7 @@
 #include "Armour.h"
 #include <fstream>
 
-struct TransformerData 
+struct TransformerData
 {
     std::string name;
     uint age;
@@ -65,13 +65,13 @@ public:
 
 private:
 
-	std::string _name;
-	uint _age;
-	bool _is_transform = false; // started value
+    std::string _name;
+    uint _age;
+    bool _is_transform = false; // started value
     uint _level = 0; // started value
     uint _health = 100; // started value
 
-	Gun _gun; // composition 
+    Gun _gun; // composition
     Armour* _armour;// association
 };
 

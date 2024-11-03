@@ -1,4 +1,4 @@
-## Assignment3
+## Assignment4
 
 Lichkovaha Daniil Andreevich, 24.B81-mm
 
@@ -6,8 +6,8 @@ Lichkovaha Daniil Andreevich, 24.B81-mm
 st129351@student.spbu.ru
 
 ## Description
-Assingment3
-class hierarchy transformers and tests for each file
+Assingment4
+class hierarchy transformers with overloads for "transformers"-files and tests for each file
 
 # Build
 
