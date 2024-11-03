@@ -10,6 +10,12 @@ Decepticon::Decepticon(DecepticonData decepticon1) : Transformer(decepticon1) {
 }
 // constructor Transformer is built into constructor Decepticon
 
+Decepticon::Decepticon() : Transformer()
+{
+	_transform_to = "No transform";
+	_viewing_radius = 0;
+}
+
 void Decepticon::Flying() {
 	SetTransform(true);
 	std::cout << "Successful Transformation to " << GetTransformTo() << std::endl;
@@ -37,3 +43,27 @@ void Decepticon::SetViewingRadius(uint viewing_radius)
 	_viewing_radius = viewing_radius;
 }
 // setters
+
+std::ostream& operator <<(std::ostream& stream, Decepticon& decepticon)
+{
+	stream << "Info about decepticon: "
+	<< "Name: " << decepticon.GetName() << ", "
+	<< "Age: " << decepticon.GetAge() << ", "
+	<< "Gun: " << decepticon.GetGunName() << ", "
+	<< "Max speed: " << decepticon.GetViewingRadius() << ", "
+	<< "Transform to: " << decepticon.GetTransformTo(); 
+
+	return stream;
+}
+// overloading <<, "std::o(utput)stream" - link to output stream
+// decepticon - second arg, now we can output info about decepticon like cout<<decepticon;
+
+bool Decepticon::operator >(Decepticon& decepticon1)
+{
+	return _viewing_radius > decepticon1.GetViewingRadius();
+}
+
+bool Decepticon::operator <(Decepticon& decepticon2)
+{
+	return _viewing_radius < decepticon2.GetViewingRadius();
+}

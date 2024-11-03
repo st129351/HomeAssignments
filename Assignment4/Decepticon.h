@@ -18,6 +18,7 @@ class Decepticon : public Transformer
 {
 public:
 	Decepticon(DecepticonData decepticon1);
+    Decepticon();
 
 	void Flying();
     
@@ -26,6 +27,12 @@ public:
 
     void SetTransformTo(std::string transform_to);
     void SetViewingRadius(uint viewing_radius);
+
+    friend std::ostream& operator <<(std::ostream& stream, Decepticon& decepticon1);
+    // overload <<
+    bool operator >(Decepticon& decepticon1);
+    bool operator <(Decepticon& decepticon2);
+    // overload </> value for compare (stronger/weaker) - viewing radius
 
 private:
 

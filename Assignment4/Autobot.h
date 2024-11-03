@@ -31,7 +31,7 @@ public:
     // overload <<
     bool operator >(Autobot& autobot1);
     bool operator <(Autobot& autobot2);
-    // overload </> value for compare (stronger/weaker) - age
+    // overload </> value for compare (stronger/weaker) - max speed
 
 private:
 
