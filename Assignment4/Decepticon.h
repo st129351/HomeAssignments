@@ -33,6 +33,7 @@ public:
     bool operator >(Decepticon& decepticon1);
     bool operator <(Decepticon& decepticon2);
     // overload </> value for compare (stronger/weaker) - viewing radius
+    // overload </> realized like class - methods
 
 private:
 

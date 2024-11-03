@@ -68,3 +68,4 @@ bool Minicon::operator <(Minicon& minicon2)
 {
     return _iq < minicon2.GetIQ();
 }
+// overload </> realized like class - methods

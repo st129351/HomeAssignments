@@ -61,6 +61,7 @@ public:
     bool operator >(Transformer& transformer1);
     bool operator <(Transformer& transformer2);
     // overload </> value for compare (stronger/weaker) - age
+    // overload </> realized like class - methods
 
 
 private:

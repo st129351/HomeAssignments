@@ -31,6 +31,7 @@ public:
     bool operator >(Autobot& autobot1);
     bool operator <(Autobot& autobot2);
     // overload </> value for compare (stronger/weaker) - max speed
+    // overload </> realized like class - methods
 
 private:
 

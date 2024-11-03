@@ -33,6 +33,7 @@ public:
     bool operator >(Minicon& autobot1);
     bool operator <(Minicon& autobot2);
     // overload </> value for compare (stronger/weaker) - iq
+    // overload </> realized like class - methods
 
 private:
 

@@ -71,3 +71,4 @@ bool Decepticon::operator <(Decepticon& decepticon2)
 {
     return _viewing_radius < decepticon2.GetViewingRadius();
 }
+// overload </> realized like class - methods

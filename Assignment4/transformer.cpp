@@ -162,3 +162,4 @@ bool Transformer::operator <(Transformer& transformer2)
 {
     return _age < transformer2.GetAge();
 }
+// overload </> realized like class - methods

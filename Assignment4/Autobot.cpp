@@ -73,3 +73,4 @@ bool Autobot::operator <(Autobot& autobot2)
 {
     return _max_speed < autobot2.GetMaxSpeed();
 }
+// overload </> realized like class - methods
