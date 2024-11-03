@@ -4,10 +4,18 @@
 
 #include "transformer.h"
 
-Transformer::Transformer(TransformerData botset) : _gun(botset.gun_name) {
+Transformer::Transformer(TransformerData botset) : _gun(botset.gun_name) 
+{
 	_name = botset.name;
 	_age = botset.age;
 	_armour = new Armour("Shield");
+}
+
+Transformer::Transformer() : _gun("Nameless gun")
+{
+    _name = "Nameless transformer";
+    _age = 0;
+    _armour = new Armour("Nameless armour");
 }
 
 Transformer::~Transformer() {
@@ -128,4 +136,26 @@ void Transformer::SetArmour(std::string new_armour, uint new_strength)
 	_armour = new Armour(new_armour);
 
 	_armour -> SetArmourStrength(new_strength);
+}
+
+std::ostream& operator <<(std::ostream& stream, Transformer& transformer)
+{
+	stream << "Info about transformer: "
+	<< "Name: " << transformer.GetName() << ", "
+	<< "Age: " << transformer.GetAge() << ", "
+	<< "Gun: " << transformer.GetGunName(); 
+
+	return stream;
+}
+// overloading <<, "std::o(utput)stream" - link to output stream
+// transformer - second arg, now we can output info about transformer like cout<<transformer;
+
+bool Transformer::operator >(Transformer& transformer1)
+{
+	return _age > transformer1.GetAge();
+}
+
+bool Transformer::operator <(Transformer& transformer2)
+{
+	return _age < transformer2.GetAge();
 }

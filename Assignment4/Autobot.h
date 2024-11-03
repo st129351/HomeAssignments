@@ -17,6 +17,7 @@ class Autobot : public Transformer
 {
 public:
 	Autobot(AutobotData autobot1);
+    Autobot();
 
 	void Racing();
     
@@ -25,6 +26,12 @@ public:
 
     void SetTransformTo(std::string transform_to);
     void SetMaxSpeed(uint max_speed);
+
+    friend std::ostream& operator <<(std::ostream& stream, Autobot& autobot1);
+    // overload <<
+    bool operator >(Autobot& autobot1);
+    bool operator <(Autobot& autobot2);
+    // overload </> value for compare (stronger/weaker) - age
 
 private:
 

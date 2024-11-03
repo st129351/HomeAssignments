@@ -7,6 +7,7 @@
 
 #include "Gun.h"
 #include "Armour.h"
+#include <fstream>
 
 struct TransformerData 
 {
@@ -20,6 +21,10 @@ class Transformer
 public:
 
     Transformer(TransformerData botset);
+    // constructor
+    Transformer();
+    // constructor overloading
+
     ~Transformer();
     // constructor and destructor
 
@@ -50,6 +55,13 @@ public:
     void SetGun(std::string new_gun, uint new_bullets);
     void SetArmour(std::string new_armour, uint new_strength);
     // setters
+
+    friend std::ostream& operator <<(std::ostream& stream, Transformer& transformer1);
+    // overload <<
+    bool operator >(Transformer& transformer1);
+    bool operator <(Transformer& transformer2);
+    // overload </> value for compare (stronger/weaker) - age
+
 
 private:
 
