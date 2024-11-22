@@ -34,8 +34,8 @@ public:
     // it happens, because 1-stly (base-class* a = new Heir-class())
     // called constructor of base-class, then constructor of Heir-class
     // and delete both constructor i can only using virtual destructor,
-    // which called 1-stly dectr heir-class, then base-class
-    // in fact virt-destr needed, when i want typed my base class
+    // which called 1-stly destr heir-class, then base-class
+    // in fact virt-destr needed, when i want typed my heir-class with a base-class
 
     virtual void OpenFire() const;
     virtual void Transform() const;

@@ -69,10 +69,12 @@ int main()
         delete trn;
     }
     // also!!!! in base-class (transformer) i using virtual destructor
-    // because default destructor: i create pointer to base-class whith typed by heir-class
-    // after command "delete" called ~Base-class, but info overridden in heir-class didn't delete, but must be deleted!
+    // because default destructor: i create pointer to base-class = cell of memory in heap;
+    // and this variable can point to any heir-class/base-class
+    // heir-class typed by base-class
+    // after command "delete" called ~Base-class, but info certain in heir-class didn't delete, but must be deleted!
     // whith virtual destructor: 
-    // after command "delete" called ~Base-class, but info overridden in heir-class didn't delete, but must be deleted!
+    // after command "delete" called ~Heir-class , then ~Base-class
 
     return 0;
 }
